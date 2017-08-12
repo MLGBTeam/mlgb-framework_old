@@ -21,3 +21,25 @@
 1. web:web、mvc配置
 
 
+
+
+#### .gitignore 文件不起作用
+
+先在`Terminal`中运行
+```git
+git rm -r -f --cached .
+```
+再运行
+```git
+git add .
+```
+
+#### git 提交空文件夹
+
+在目录下添加.gitignore文件,内容如下：
+
+```git
+# Ignore everything in this directory 
+* 
+# Except this file !.gitignore 
+```
