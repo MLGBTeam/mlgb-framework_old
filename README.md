@@ -33,13 +33,3 @@ git rm -r -f --cached .
 ```git
 git add .
 ```
-
-#### git 提交空文件夹
-
-在目录下添加.gitignore文件,内容如下：
-
-```git
-# Ignore everything in this directory 
-* 
-# Except this file !.gitignore 
-```
