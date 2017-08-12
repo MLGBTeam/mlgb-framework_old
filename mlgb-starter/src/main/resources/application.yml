@@ -1,0 +1,9 @@
+server:
+    port: ${port:8080}
+
+spring:
+    datasource:
+        driver-class-name: com.mysql.jdbc.Driver
+        url: jdbc:mysql://lujunfeng.cn:3306/mlgbframework
+        username: mlgb
+        password: mlgbTeam@666

@@ -8,11 +8,13 @@
     <artifactId>mlgb-framework</artifactId>
     <version>1.0</version>
     <packaging>pom</packaging>
-    
+
     <modules>
-        <module>mlgb-authorize</module>
-        <module>mlgb-datasource</module>
+        <module>mlgb-authorization</module>
+        <module>mlgb-core</module>
+        <module>mlgb-persistence</module>
         <module>mlgb-starter</module>
+        <module>mlgb-web</module>
     </modules>
 
     <parent>
@@ -39,6 +41,8 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+
+
     </dependencies>
 
 
