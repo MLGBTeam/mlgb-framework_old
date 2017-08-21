@@ -1,9 +1,29 @@
 server:
     port: ${port:8080}
-
 spring:
+    profiles:
+        active: dev
+logback:
+    log-home: logs
+    appname: mlgb-framework
+
+---
+# 开发环境配置
+spring:
+    profiles: dev
     datasource:
-        driver-class-name: com.mysql.jdbc.Driver
-        url: jdbc:mysql://lujunfeng.cn:3306/mlgbframework
-        username: mlgb
-        password: mlgbTeam@666
+        druid:
+            driver-class-name: com.mysql.jdbc.Driver
+            url: jdbc:mysql://lujunfeng.cn:3306/mlgbframework?useUnicode=true&characterEncoding=utf8&autoReconnect=true&useSSL=false
+            username: mlgb
+            password: mlgbTeam@666
+
+---
+# 测试环境配置
+spring:
+    profiles: test
+
+---
+# 生产环境配置
+spring:
+    profiles: prod

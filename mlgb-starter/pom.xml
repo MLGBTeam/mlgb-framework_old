@@ -15,19 +15,7 @@
 
         <dependency>
             <groupId>cn.mlgbteam</groupId>
-            <artifactId>mlgb-persistence-datasource</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>cn.mlgbteam</groupId>
-            <artifactId>mlgb-persistence-mybatis</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>cn.mlgbteam</groupId>
-            <artifactId>mlgb-web</artifactId>
+            <artifactId>mlgb-authorization-api</artifactId>
             <version>${project.version}</version>
         </dependency>
 
