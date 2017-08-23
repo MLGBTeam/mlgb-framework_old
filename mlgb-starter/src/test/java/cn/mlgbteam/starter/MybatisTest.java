@@ -21,7 +21,7 @@ public class MybatisTest {
 
         User user = new User();
         user.setId(UUID.randomUUID().toString());
-        user.setName("张三");
+        user.setName("abc");
         user.setAge(22);
 
         userService.insertUser(user);

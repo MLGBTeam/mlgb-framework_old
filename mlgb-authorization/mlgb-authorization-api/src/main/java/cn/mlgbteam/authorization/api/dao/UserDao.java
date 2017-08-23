@@ -2,12 +2,12 @@ package cn.mlgbteam.authorization.api.dao;
 
 import cn.mlgbteam.authorization.api.entity.User;
 import org.apache.ibatis.annotations.Insert;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
-@Component
+@Repository
 public interface UserDao {
 
-    @Insert(" INSERT INTO `user` (`id`, `name`, `age`) VALUES (#{id}, #{name}, #{age) ")
-    public Integer insertUser(User user);
-    
+    @Insert(" INSERT INTO `user` (`id`, `name`, `age`) VALUES (#{id}, #{name}, #{age}) ")
+    Integer insertUser(User user);
+
 }

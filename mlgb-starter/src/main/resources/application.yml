@@ -68,6 +68,8 @@ pagehelper:
     #（相当于没有执行分页查询，但是返回结果仍然是 Page 类型）。
     page-size-zero: true
     supportMethodsArguments: true
+mybatis:
+  type-handlers-package:
 
 ---
 # 开发环境配置

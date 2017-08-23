@@ -1,9 +1,16 @@
 package cn.mlgbteam.starter;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@SpringBootApplication
+@SpringBootApplication(
+        scanBasePackages = {
+                "cn.mlgbteam.**.controller",
+                "cn.mlgbteam.**.service",
+                "cn.mlgbteam.**.dao"}
+)
+@MapperScan("cn.mlgbteam.**.dao")
 public class Application {
 
     public static void main(final String[] args) {
