@@ -1,13 +1,11 @@
 package cn.mlgbteam.authorization.api.dao;
 
 import cn.mlgbteam.authorization.api.entity.User;
-import org.apache.ibatis.annotations.Insert;
 import org.springframework.stereotype.Repository;
+import tk.mybatis.mapper.common.Mapper;
 
 @Repository
-public interface UserDao {
+public interface UserDao extends Mapper<User> {
 
-    @Insert(" INSERT INTO `user` (`id`, `name`, `age`) VALUES (#{id}, #{name}, #{age}) ")
-    Integer insertUser(User user);
 
 }
