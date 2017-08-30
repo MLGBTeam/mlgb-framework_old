@@ -1,9 +1,13 @@
 server:
-    port: ${port:8080}
+    port: ${port:8088}
 spring:
     profiles:
         active: dev
     datasource:
+        initialize: true
+        separator: /*--SEPARATOR--*/
+        platform: ${spring.datasource.druid.db-type}
+        schema: classpath:schema-${spring.datasource.platform}.sql
         druid:
             # 连接池初始化大小
             initialSize: 1
@@ -57,10 +61,14 @@ spring:
                 # 防火墙
                 wall:
                     enabled: true
+                    config:
+                        # 是否允许非以上基本语句的其他语句，缺省关闭，通过这个选项就能够屏蔽DDL。
+                        noneBaseStatementAllow: true
 logback:
     log-home: logs
     appname: mlgb-framework
 pagehelper:
+    # helperDialect: mysql
     # 分页合理化参数。当该参数设置为 true 时，pageNum<=0 时会查询第一页，
     # pageNum>pages（超过总数时），会查询最后一页。默认false 时，直接根据参数进行查询。
     reasonable: true
@@ -73,6 +81,7 @@ pagehelper:
 mapper:
     before: true
     identity: SELECT uuid();
+
 ---
 # 开发环境配置
 spring:
@@ -81,6 +90,7 @@ spring:
         druid:
             # 数据库驱动名。这一项可配可不配，如果不配置druid会根据url自动识别dbType，
             # 然后选择相应的driverClassName。
+            db-type: mysql
             driver-class-name: com.mysql.jdbc.Driver
             # 数据库连接
             url: jdbc:mysql://lujunfeng.cn:3306/mlgbframework?useUnicode=true&characterEncoding=utf8&autoReconnect=true&useSSL=false
