@@ -40,6 +40,7 @@ IF NOT EXISTS `version_history` (
 DROP PROCEDURE
 IF EXISTS execute_version_setting;
 /*--SEPARATOR--*/
+
 CREATE PROCEDURE execute_version_setting()
     BEGIN
         -- 查询当前版本,如果不存在版本信息就返回-1，存在则返回版本号
@@ -125,6 +126,7 @@ CREATE PROCEDURE execute_version_setting()
         END WHILE;
     END;
 /*--SEPARATOR--*/
+
 -- 执行版本信息设置
 CALL execute_version_setting();
 /*--SEPARATOR--*/
