@@ -9,7 +9,8 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>mlgb-starter</artifactId>
+    <artifactId>mlgb-application</artifactId>
+    <packaging>jar</packaging>
 
     <dependencies>
 
@@ -20,6 +21,5 @@
         </dependency>
 
     </dependencies>
-
 
 </project>

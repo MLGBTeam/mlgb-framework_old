@@ -10,5 +10,6 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>mlgb-core</artifactId>
-    
+    <packaging>jar</packaging>
+
 </project>

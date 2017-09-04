@@ -1,4 +1,4 @@
-package cn.mlgbteam.starter;
+package cn.mlgbteam.application;
 
 import cn.mlgbteam.authorization.api.entity.User;
 import cn.mlgbteam.authorization.api.service.UserService;
@@ -22,9 +22,10 @@ public class MybatisTest {
     @Test
     public void testInsert() {
         final User user = new User();
-        //user.setId(UUID.randomUUID().toString());
+        user.setId(UUID.randomUUID().toString());
         user.setName("李四");
         user.setAge(23);
+        System.out.println(user.toString());
         this.userService.insertUser(user);
         System.out.println(user.toString());
     }
@@ -48,11 +49,11 @@ public class MybatisTest {
         final User user1 = new User();
         user1.setId(UUID.randomUUID().toString());
         user1.setName("李四");
-        user1.setAge(23);
+        //user1.setAge(23);
         final User user2 = new User();
         user2.setId(UUID.randomUUID().toString());
         user2.setName("王五");
-        user2.setAge(24);
+        //user2.setAge(24);
         userList.add(user1);
         userList.add(user2);
 

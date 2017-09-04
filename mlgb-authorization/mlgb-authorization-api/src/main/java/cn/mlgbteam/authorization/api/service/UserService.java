@@ -28,7 +28,7 @@ public class UserService {
     }
 
     public int insertUserList(final List<User> userList) {
-        return this.userDao.insertList(userList);
+        return this.userDao.insertListSelective(userList);
     }
 
 }

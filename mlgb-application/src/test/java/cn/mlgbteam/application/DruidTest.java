@@ -1,4 +1,4 @@
-package cn.mlgbteam.starter;
+package cn.mlgbteam.application;
 
 import com.alibaba.druid.filter.config.ConfigTools;
 import org.junit.Test;
@@ -7,10 +7,10 @@ public class DruidTest {
 
     @Test
     public void decrypt() {
-        String[] args = {"mlgbTeam@666"};
+        final String[] args = {"mlgbTeam@666"};
         try {
             ConfigTools.main(args);
-        } catch (Exception e) {
+        } catch (final Exception e) {
             e.printStackTrace();
         }
     }

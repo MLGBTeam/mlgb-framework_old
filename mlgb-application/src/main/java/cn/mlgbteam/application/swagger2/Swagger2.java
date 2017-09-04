@@ -1,4 +1,4 @@
-package cn.mlgbteam.starter.swagger2;
+package cn.mlgbteam.application.swagger2;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

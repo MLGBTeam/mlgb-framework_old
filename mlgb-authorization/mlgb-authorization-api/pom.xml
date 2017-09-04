@@ -12,5 +12,14 @@
     <artifactId>mlgb-authorization-api</artifactId>
     <packaging>jar</packaging>
 
+    <dependencies>
+
+        <dependency>
+            <groupId>cn.mlgbteam</groupId>
+            <artifactId>mlgb-core</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+    </dependencies>
 
 </project>

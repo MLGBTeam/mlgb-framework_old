@@ -1,4 +1,4 @@
-package cn.mlgbteam.starter.web;
+package cn.mlgbteam.application.web;
 
 import com.alibaba.fastjson.support.spring.FastJsonHttpMessageConverter;
 import java.util.List;
@@ -10,8 +10,8 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 public class WebMvcConfigurer extends WebMvcConfigurerAdapter {
 
     @Override
-    public void configureMessageConverters(List<HttpMessageConverter<?>> converters) {
-        FastJsonHttpMessageConverter converter = new FastJsonHttpMessageConverter();
+    public void configureMessageConverters(final List<HttpMessageConverter<?>> converters) {
+        final FastJsonHttpMessageConverter converter = new FastJsonHttpMessageConverter();
         //自定义配置...
         //FastJsonConfig config = new FastJsonConfig();
         //config.set ...

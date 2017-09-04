@@ -45,11 +45,9 @@ pagehelper:
   supportMethodsArguments: true
   autoRuntimeDialect: true
 mapper:
-  before: true
-  identity: SELECT uuid();
+  uuid: "@java.util.UUID@randomUUID().toString()"
   mappers:
-    - tk.mybatis.mapper.common.Mapper
-    - tk.mybatis.mapper.common.MySqlMapper
+    - cn.mlgbteam.core.mapper.MLGBMapper
 
 ---
 # 开发环境配置

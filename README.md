@@ -2,14 +2,14 @@
 
 模块分类
 
+1. application:启动配置
+
 1. authorization:权限管理
 
    1. api:登录接口
    1. shiro:shiro权限配置
 
 1. core:工具包、通用基类
-
-1. starter:启动配置
 
 1. system:系统模块
 
